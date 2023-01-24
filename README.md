@@ -18,19 +18,15 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [ ] A nav Bar at the top of the page to navigate quickly to the Game Section.
-* [ ] A donate Now button to allow users to donate to our games.
+* [ ] A donate button to allow users to donate to our games.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='video1302429889.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/JohnnyCortez/web102_prework/blob/53795bb902c74ee37ad63a4bb48730378e793139/Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with zoom
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ScreenToGif
 
 ## Notes
 
