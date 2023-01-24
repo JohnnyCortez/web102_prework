@@ -43,8 +43,9 @@ function addGamesToPage(games) {
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-            newDiv.innerHTML = `<img src = ${games[i].img} width= 200 height = 150 /> <p>${games[i].name}</p> <p>${games[i].description}</p>`;
-
+            newDiv.innerHTML = `<img src = ${games[i].img} width= 200 height = 150 /> 
+            <p>${games[i].name}</p> 
+            <p>${games[i].description}</p>`;
 
         // append the game to the games-container
             gamesContainer.appendChild(newDiv);
@@ -168,6 +169,69 @@ const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been 
 const newP = document.createElement("p");
 newP.innerHTML = displayStr;
 descriptionContainer.appendChild(newP);
+
+const newDiv = document.createElement("div");
+newDiv.innerHTML = `<button id = "donate">Donate Now</botton>`
+descriptionContainer.appendChild(newDiv);
+
+const donateDiv = document.createElement("div");
+donateDiv.innerHTML = `<div id= "donate-Div"></div>`
+descriptionContainer.appendChild(donateDiv);
+
+const donateContainer = document.getElementById("donate-Div");
+
+const donateBtn = document.getElementById("donate");
+
+function donate() {
+    deleteChildElements(donateContainer);
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+    <div>
+        <label for="amount">Amount:</label>
+        <input id="amount" name="amount" type="number" min=0>
+    </div>
+    <div>
+        <label id="cc-numLbl" for="cc-num">Card Number:</label>
+        <input id="cc-num" name="user_cc-num" type="text">
+    </div>
+    <div>
+        <label for="zip" id="zipLbl">Zip Code:</label>
+        <input id="zip" name="user_zip" type="text"> 
+    </div>
+    <div>
+        <label id="cvvLbl" for="cvv">CVV:</label>
+        <input id="cvv" name="user_cvv" type="text"> 
+    </div>
+    <label>Expiration Date:</label>
+    <select id="exp-month" name="user_exp-month">
+      <option value="1">1 - January</option>
+      <option value="2">2 - February</option>
+      <option value="3">3 - March</option>
+      <option value="4">4 - April</option>
+      <option value="5">5 - May</option>
+      <option value="6">6 - June</option>
+      <option value="7">7 - July</option>
+      <option value="8">8 - August</option>
+      <option value="9">9 - September</option>
+      <option value="10">10 - October</option>
+      <option value="11">11 - November</option> 
+      <option value="12">12 - December</option>                       
+    </select>  
+    <select id="exp-year" name="user_exp-year">
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>                      
+    </select>
+    <br>
+    <Button>Submit</Button>
+    `;
+    donateContainer.appendChild(newDiv);
+
+}
+
+donateBtn.addEventListener("click", donate);
 
 
 /************************************************************************************
